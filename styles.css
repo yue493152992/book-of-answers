@@ -341,7 +341,7 @@ body {
 
 .page3-image {
     position: static;
-    max-width: 50px;
+    max-width: 40px;
     opacity: 0;
     transition: opacity 0.3s ease;
     transform: none;
@@ -355,7 +355,7 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
     text-align: left;
-    max-width: 280px;
+    max-width: 200px;
 }
 
 .qr-description p {
