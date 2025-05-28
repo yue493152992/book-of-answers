@@ -94,19 +94,18 @@ body {
 /* 主内容页面样式 */
 .main-content {
     min-height: 100vh;
-    padding: 20px;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 30px;
+    align-items: flex-start;
+    width: 400px;
+    margin: 30px auto 0;
 }
 
 .container {
-    width: 100%;
-    max-width: 400px;
+    width: 400px;
     padding: 15px 20px;
-    margin: 0 auto;
+    margin: 0;
     text-align: center;
 }
 
@@ -372,7 +371,7 @@ body {
     padding: 0;
     font-size: 10px;
     line-height: 1.4;
-    color: rgba(255, 255, 255, 1);
+    color: #FFFFFF !important;
     white-space: normal;
     word-wrap: break-word;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
@@ -416,6 +415,18 @@ body {
 }
 
 @media (max-width: 480px) {
+    .main-content {
+        width: 400px;
+        padding: 0;
+        margin: 30px auto 0;
+    }
+
+    .container {
+        width: 400px;
+        padding: 15px 20px;
+        margin: 0;
+    }
+
     .landing-page h1 {
         font-size: 28px;
     }
@@ -431,10 +442,6 @@ body {
     .start-button {
         padding: 10px 30px;
         font-size: 16px;
-    }
-
-    .container {
-        padding: 15px 20px;
     }
 
     .container header h1 {
@@ -485,5 +492,6 @@ body {
 
     .qr-description p {
         font-size: 9px;
+        color: #FFFFFF !important;
     }
 }
