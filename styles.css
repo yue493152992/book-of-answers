@@ -12,12 +12,13 @@ body {
     background-image: url('1.png');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
+    background-position: top center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 /* 首页样式 */
@@ -119,14 +120,14 @@ body {
 }
 
 .container header h1 {
-    font-size: 24px;
+    font-size: 20px;
     color: #000000;
     position: relative;
     display: inline-block;
     padding: 0 20px;
     text-shadow: none;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .container header h1::before,
@@ -138,7 +139,7 @@ body {
 .instructions {
     background-color: transparent;
     padding: 0;
-    margin: 0 -20px 25px;
+    margin: 0 -20px 20px;
     width: calc(100% + 40px);
 }
 
@@ -148,14 +149,14 @@ body {
 }
 
 .instructions li {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     color: #000000;
     padding-left: 25px;
     padding-right: 15px;
-    font-size: 16px;
+    font-size: 14px;
     position: relative;
     text-shadow: none;
-    line-height: 1.6;
+    line-height: 1.5;
     text-align: left;
 }
 
@@ -331,8 +332,8 @@ body {
 }
 
 .qr-container {
-    position: fixed;
-    bottom: 10px;
+    position: absolute;
+    top: calc(100vh - 10px);  /* 从视窗顶部开始计算位置 */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -340,10 +341,9 @@ body {
     gap: 10px;
     width: auto;
     padding: 5px 10px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: transparent;
     border-radius: 8px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    z-index: 1;
 }
 
 .page3-image {
@@ -356,7 +356,7 @@ body {
 }
 
 .page3-image.show {
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .qr-description {
@@ -371,13 +371,13 @@ body {
     padding: 0;
     font-size: 10px;
     line-height: 1.4;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.8);
     white-space: normal;
     word-wrap: break-word;
 }
 
 .page3-image.show + .qr-description {
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .answer-chinese {
@@ -454,6 +454,7 @@ body {
 
     .qr-container {
         padding: 3px 8px;
+        top: calc(100vh - 8px);  /* 在移动端稍微调整位置 */
     }
 
     .page3-image {
@@ -463,5 +464,22 @@ body {
 
     .qr-description p {
         font-size: 9px;
+    }
+
+    .container header h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .instructions li {
+        font-size: 13px;
+        margin-bottom: 14px;
+        line-height: 1.4;
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+
+    .instructions li::before {
+        font-size: 13px;
     }
 }
