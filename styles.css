@@ -341,7 +341,7 @@ body {
 
 .page3-image {
     position: static;
-    max-width: 65px;
+    max-width: 50px;
     opacity: 0;
     transition: opacity 0.3s ease;
     transform: none;
