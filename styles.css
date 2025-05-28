@@ -28,12 +28,13 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
 }
 
 .landing-page .content {
     padding: 0;
-    max-width: 90%;
-    width: min(400px, 50vw);
+    width: 100%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,13 +42,13 @@ body {
 
 .landing-page .subtitle {
     color: rgb(212, 175, 55);
-    font-size: clamp(1.2em, 2.4vw, 1.4em);
+    font-size: 18px;
     margin-bottom: 10px;
     letter-spacing: 2px;
 }
 
 .landing-page h1 {
-    font-size: clamp(3em, 6vw, 4em);
+    font-size: 36px;
     margin-bottom: 15px;
     letter-spacing: 4px;
     color: rgb(212, 175, 55);
@@ -56,14 +57,14 @@ body {
 
 .landing-page .author {
     color: rgb(227, 186, 110);
-    font-size: 1em;
+    font-size: 16px;
     margin-bottom: 15px;
     letter-spacing: 1px;
 }
 
 .landing-page .description {
     color: rgb(212, 175, 55);
-    font-size: clamp(1.1em, 2.2vw, 1.3em);
+    font-size: 18px;
     margin-bottom: 30px;
     letter-spacing: 1px;
 }
@@ -72,8 +73,8 @@ body {
     background-color: transparent;
     color: rgb(212, 175, 55);
     border: 2px solid rgb(212, 175, 55);
-    padding: min(15px, 1.5vw) min(45px, 4.5vw);
-    font-size: clamp(1.1em, 2.2vw, 1.3em);
+    padding: 12px 36px;
+    font-size: 18px;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -92,41 +93,40 @@ body {
 /* 主内容页面样式 */
 .main-content {
     min-height: 100vh;
-    padding: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 100%;
-    margin-top: 5vh;
+    margin-top: 30px;
 }
 
 .container {
-    max-width: min(400px, 45vw);
-    padding: min(15px, 1.5vw) 4em;
+    width: 100%;
+    max-width: 400px;
+    padding: 15px 20px;
     margin: 0 auto;
     text-align: center;
-    margin-top: min(30px, 3vw);
 }
 
 .container header {
     text-align: center;
     position: relative;
-    margin-bottom: min(35px, 3.5vw);
+    margin-bottom: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .container header h1 {
-    font-size: clamp(1.2em, 2.4vw, 1.5em);
+    font-size: 24px;
     color: #000000;
     position: relative;
     display: inline-block;
-    padding: 0 min(35px, 3.5vw);
+    padding: 0 20px;
     text-shadow: none;
     font-weight: bold;
-    margin-bottom: min(15px, 1.5vw);
+    margin-bottom: 15px;
 }
 
 .container header h1::before,
@@ -138,21 +138,21 @@ body {
 .instructions {
     background-color: transparent;
     padding: 0;
-    margin: 0 -4em min(25px, 2.5vw) -4em;
-    max-width: calc(100% + 8em);
-    width: calc(100% + 8em);
+    margin: 0 -20px 25px;
+    width: calc(100% + 40px);
 }
 
 .instructions ul {
     list-style-type: none;
+    padding: 0 20px;
 }
 
 .instructions li {
-    margin-bottom: min(20px, 2vw);
+    margin-bottom: 20px;
     color: #000000;
-    padding-left: 4em;
-    padding-right: 3em;
-    font-size: clamp(0.9em, 1.8vw, 1.1em);
+    padding-left: 25px;
+    padding-right: 15px;
+    font-size: 16px;
     position: relative;
     text-shadow: none;
     line-height: 1.6;
@@ -163,7 +163,7 @@ body {
     content: counter(item) ".";
     counter-increment: item;
     position: absolute;
-    left: 3em;
+    left: 0;
     color: #000000;
     font-weight: bold;
 }
@@ -174,19 +174,28 @@ body {
 
 .answer-section {
     text-align: center;
-    margin-bottom: min(30px, 3vw);
-    padding: 0 min(10px, 1vw);
-    margin-top: min(40px, 4vw);
+    margin-bottom: 30px;
+    padding: 0 10px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .page-input {
-    width: min(180px, 40%);
-    padding: min(8px, 0.8vw) min(12px, 1.2vw);
-    font-size: clamp(0.95em, 1.9vw, 1.15em);
+    width: 160px;
+    padding: 8px 12px;
+    font-size: 16px;
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     text-align: center;
-    margin-right: min(10px, 1vw);
     background-color: rgba(255, 255, 255, 0.9);
     transition: all 0.3s ease;
     -webkit-appearance: none;
@@ -206,21 +215,14 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.input-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: min(30px, 3vw);
-}
-
 .random-answer-button {
     display: block;
-    margin: min(15px, 1.5vw) auto 0;
+    margin: 15px auto 0;
     background-color: rgba(255, 255, 255, 0.9);
     color: #000000;
     border: none;
-    padding: min(8px, 0.8vw) min(30px, 3vw);
-    font-size: clamp(0.95em, 1.9vw, 1.15em);
+    padding: 8px 30px;
+    font-size: 16px;
     border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -245,8 +247,8 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     color: #000000;
     border: none;
-    padding: min(8px, 0.8vw) min(20px, 2vw);
-    font-size: clamp(0.95em, 1.9vw, 1.15em);
+    padding: 8px 20px;
+    font-size: 16px;
     border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -260,14 +262,14 @@ body {
 }
 
 .answer-display {
-    margin-top: min(20px, 2vw);
-    padding: min(20px, 2vw) min(30px, 3vw);
+    margin-top: 20px;
+    padding: 20px;
     background-color: transparent;
-    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: min(30px, 3vw);
+    gap: 20px;
 }
 
 .answer-display.hidden {
@@ -280,8 +282,8 @@ body {
 
 .answer-display h3 {
     color: #000000;
-    margin-bottom: min(15px, 1.5vw);
-    font-size: clamp(1.2em, 2.4vw, 1.4em);
+    margin-bottom: 15px;
+    font-size: 22px;
     text-shadow: none;
     text-align: center;
 }
@@ -294,9 +296,9 @@ body {
 }
 
 #answer {
-    font-size: clamp(1.1em, 2.2vw, 1.3em);
+    font-size: 20px;
     color: #000000;
-    margin: min(15px, 1.5vw) 0;
+    margin: 15px 0;
     font-weight: bold;
     text-shadow: none;
     line-height: 1.8;
@@ -329,111 +331,53 @@ body {
 }
 
 .qr-container {
-    position: absolute;
-    bottom: 35px;
+    position: fixed;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: flex-start;
-    gap: 15px;
-    max-width: 85%;
+    gap: 10px;
+    width: auto;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .page3-image {
     position: static;
-    max-width: 40px;
+    width: 40px;
+    height: 40px;
     opacity: 0;
     transition: opacity 0.3s ease;
     transform: none;
 }
 
 .page3-image.show {
-    opacity: 1;
+    opacity: 0.6;
 }
 
 .qr-description {
     opacity: 0;
     transition: opacity 0.3s ease;
     text-align: left;
-    max-width: 200px;
+    max-width: 280px;
 }
 
 .qr-description p {
     margin: 0;
     padding: 0;
-    font-size: 11px;
-    line-height: 1.6;
-    color: #000000;
+    font-size: 10px;
+    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.6);
     white-space: normal;
     word-wrap: break-word;
 }
 
 .page3-image.show + .qr-description {
-    opacity: 1;
-}
-
-@media (max-width: 600px) {
-    .main-content {
-        margin-top: 2vh;
-    }
-
-    .container {
-        margin-top: min(20px, 2vw);
-    }
-
-    .instructions li {
-        margin-bottom: min(12px, 1.2vw);
-        padding-left: 2em;
-        padding-right: 1em;
-        line-height: 1.4;
-    }
-
-    .instructions li::before {
-        left: 1em;
-    }
-
-    .answer-section {
-        margin-top: min(30px, 3vw);
-    }
-
-    .container {
-        max-width: 80vw;
-        padding: min(12px, 1.2vw) 2em;
-    }
-
-    .container header h1 {
-        font-size: clamp(1.1em, 2.2vw, 1.3em);
-        padding: 0 min(30px, 3vw);
-    }
-
-    .instructions {
-        margin: 0 -2em min(15px, 1.5vw) -2em;
-        max-width: calc(100% + 4em);
-        width: calc(100% + 4em);
-    }
-
-    .instructions li {
-        font-size: clamp(0.85em, 1.7vw, 1em);
-        margin-bottom: min(12px, 1.2vw);
-        padding-left: 2em;
-        padding-right: 1em;
-        line-height: 1.4;
-    }
-
-    .instructions li::before {
-        left: 1em;
-    }
-
-    .page-input {
-        width: min(140px, 45%);
-        padding: min(6px, 0.6vw) min(10px, 1vw);
-        font-size: clamp(0.9em, 1.8vw, 1.1em);
-    }
-
-    .answer-button {
-        padding: min(6px, 0.6vw) min(15px, 1.5vw);
-        font-size: clamp(0.9em, 1.8vw, 1.1em);
-    }
+    opacity: 0.6;
 }
 
 .answer-chinese {
@@ -467,4 +411,57 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 480px) {
+    .landing-page h1 {
+        font-size: 28px;
+    }
+
+    .landing-page .subtitle {
+        font-size: 16px;
+    }
+
+    .landing-page .description {
+        font-size: 16px;
+    }
+
+    .start-button {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .page-input {
+        width: 140px;
+    }
+
+    .answer-button,
+    .random-answer-button {
+        padding: 8px 20px;
+    }
+
+    .answer-chinese {
+        font-size: 20px;
+    }
+
+    .answer-english {
+        font-size: 18px;
+    }
+
+    .qr-container {
+        padding: 3px 8px;
+    }
+
+    .page3-image {
+        width: 32px;
+        height: 32px;
+    }
+
+    .qr-description p {
+        font-size: 9px;
+    }
 }
