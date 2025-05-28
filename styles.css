@@ -333,7 +333,7 @@ body {
 
 .qr-container {
     position: absolute;
-    top: calc(100vh - 10px);  /* 从视窗顶部开始计算位置 */
+    top: calc(100vh - 10px);
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -366,7 +366,9 @@ body {
     max-width: 280px;
 }
 
-.qr-description p {
+.qr-description p,
+.qr-container .qr-description p,
+body .qr-container .qr-description p {
     margin: 0;
     padding: 0;
     font-size: 10px;
@@ -374,7 +376,7 @@ body {
     color: #FFFFFF !important;
     white-space: normal;
     word-wrap: break-word;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
 }
 
 .page3-image.show + .qr-description {
@@ -490,8 +492,11 @@ body {
         height: 32px;
     }
 
-    .qr-description p {
+    .qr-description p,
+    .qr-container .qr-description p,
+    body .qr-container .qr-description p {
         font-size: 9px;
         color: #FFFFFF !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
     }
 }
