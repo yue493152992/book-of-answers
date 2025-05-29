@@ -152,22 +152,25 @@ body {
 }
 
 .instructions {
-    background-color: transparent;
-    padding: 0;
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 15px;
     margin: 0 -30px 20px -30px;
     max-width: calc(100% + 60px);
     width: calc(100% + 60px);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .instructions ul {
     list-style-type: none;
-    padding: 0 20px;
+    padding: 0 15px;
+    margin: 0;
 }
 
 .instructions li {
     margin-bottom: 12px;
     color: #000000;
-    padding-left: 2em;
+    padding-left: 1.5em;
     padding-right: 1em;
     font-size: 0.95em;
     position: relative;
@@ -178,13 +181,18 @@ body {
     animation: fadeIn 0.8s ease forwards;
 }
 
+.instructions li:last-child {
+    margin-bottom: 0;
+}
+
 .instructions li::before {
-    content: counter(item) ".";
-    counter-increment: item;
+    content: "•";
     position: absolute;
-    left: 0;
+    left: 0.5em;
     color: #000000;
     font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1;
 }
 
 .instructions {
@@ -212,7 +220,7 @@ body {
     border-radius: 12px;
     margin-right: 6px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.7);
     transition: all 0.3s ease;
     -webkit-appearance: none;
     -moz-appearance: textfield;
@@ -228,10 +236,16 @@ body {
     margin: 0;
 }
 
+.page-input:hover {
+    border-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 .page-input:focus {
     outline: none;
     border-color: rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 
 .input-group {
@@ -246,9 +260,13 @@ body {
     padding: 6px 25px;
     font-size: 0.9em;
     border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
     opacity: 0;
     animation: fadeIn 0.8s ease forwards;
     animation-delay: 2.4s;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .random-answer-button:disabled {
@@ -258,17 +276,27 @@ body {
     box-shadow: none;
 }
 
+.random-answer-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
 .answer-button {
     padding: 6px 16px;
     font-size: 0.9em;
     border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
     opacity: 0;
     animation: fadeIn 0.8s ease forwards;
     animation-delay: 2.4s;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .answer-button:hover {
-    background-color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.9);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
@@ -425,16 +453,17 @@ body {
         margin: 0 -20px 15px -20px;
         max-width: calc(100% + 40px);
         width: calc(100% + 40px);
+        padding: 12px;
     }
 
     .instructions ul {
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     .instructions li {
         font-size: 0.9em;
         margin-bottom: 10px;
-        padding-left: 2em;
+        padding-left: 1.5em;
         padding-right: 1em;
         line-height: 1.5;
     }
