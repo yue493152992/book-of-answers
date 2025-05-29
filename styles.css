@@ -378,7 +378,7 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 15px;
-    max-width: 85%;
+    width: 400px;
     background-color: rgba(64, 64, 64, 0.85);
     padding: 12px 15px;
     border-radius: 10px;
@@ -426,6 +426,8 @@ body {
     }
     
     .qr-container {
+        width: 90%;
+        max-width: 400px;
         top: calc((100vh - 600px) / 2 + 600px + 30px);
         padding: 10px 12px;
     }
