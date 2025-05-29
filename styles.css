@@ -1,0 +1,501 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-color: #000;
+    background-image: url('1.png');
+    background-repeat: no-repeat;
+    background-size: 400px 600px;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    padding-top: calc((100vh - 600px) / 2);
+}
+
+/* 首页样式 */
+.landing-page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.landing-page .content {
+    padding: 0;
+    max-width: 90%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing-page .subtitle {
+    color: rgb(212, 175, 55);
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.landing-page h1 {
+    font-size: 2.5em;
+    margin-bottom: 12px;
+    letter-spacing: 3px;
+    color: rgb(212, 175, 55);
+    font-weight: bold;
+}
+
+.landing-page .author {
+    color: rgb(227, 186, 110);
+    font-size: 1em;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.landing-page .description {
+    color: rgb(212, 175, 55);
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    max-width: 350px;
+}
+
+.start-button {
+    background-color: transparent;
+    color: rgb(212, 175, 55);
+    border: 2px solid rgb(212, 175, 55);
+    padding: 12px 35px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.start-button:hover {
+    background-color: rgb(212, 175, 55);
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* 主内容页面样式 */
+.main-content {
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 5vh;
+}
+
+.container {
+    width: 400px;
+    max-width: 400px;
+    padding: 15px 30px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container header h1 {
+    font-size: 1.3em;
+    color: #000000;
+    position: relative;
+    display: inline-block;
+    padding: 0 25px;
+    text-shadow: none;
+    font-weight: bold;
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.container header h1::before,
+.container header h1::after {
+    width: 30px;
+    height: 22px;
+}
+
+.instructions {
+    background-color: transparent;
+    padding: 0;
+    margin: 0 -30px 20px -30px;
+    max-width: calc(100% + 60px);
+    width: calc(100% + 60px);
+}
+
+.instructions ul {
+    list-style-type: none;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+    color: #000000;
+    padding-left: 8em;
+    padding-right: 8em;
+    font-size: 0.85em;
+    position: relative;
+    text-shadow: none;
+    line-height: 1.4;
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.instructions li::before {
+    content: counter(item) ".";
+    counter-increment: item;
+    position: absolute;
+    left: 7em;
+    color: #000000;
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+.instructions {
+    counter-reset: item;
+}
+
+.instructions li:nth-child(1) { animation-delay: 0.4s; }
+.instructions li:nth-child(2) { animation-delay: 0.8s; }
+.instructions li:nth-child(3) { animation-delay: 1.2s; }
+.instructions li:nth-child(4) { animation-delay: 1.6s; }
+.instructions li:nth-child(5) { animation-delay: 2.0s; }
+
+.answer-section {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    margin-top: 25px;
+}
+
+.page-input {
+    width: 80px;
+    padding: 6px 8px;
+    font-size: 0.85em;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin-right: 6px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 2.4s;
+}
+
+/* 去掉 Firefox 的上下选择按钮 */
+.page-input::-webkit-outer-spin-button,
+.page-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.page-input:focus {
+    outline: none;
+    border-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: min(30px, 3vw);
+}
+
+.random-answer-button {
+    margin: 12px auto 0;
+    padding: 6px 25px;
+    font-size: 0.9em;
+    border-radius: 12px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 2.4s;
+}
+
+.random-answer-button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    transform: none;
+    box-shadow: none;
+}
+
+.answer-button {
+    padding: 6px 16px;
+    font-size: 0.9em;
+    border-radius: 12px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 2.4s;
+}
+
+.answer-button:hover {
+    background-color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.answer-display {
+    margin-top: 15px;
+    padding: 15px 20px;
+    background-color: transparent;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: min(30px, 3vw);
+}
+
+.answer-display.hidden {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.answer-display h3 {
+    color: #000000;
+    margin-bottom: min(15px, 1.5vw);
+    font-size: clamp(1.2em, 2.4vw, 1.4em);
+    text-shadow: none;
+    text-align: center;
+}
+
+.h3-line {
+    margin-bottom: 10px;
+    line-height: 1.8;
+    text-align: center;
+    font-size: 20px;
+}
+
+#answer {
+    font-size: clamp(1.1em, 2.2vw, 1.3em);
+    color: #000000;
+    margin: min(15px, 1.5vw) 0;
+    font-weight: bold;
+    text-shadow: none;
+    line-height: 1.8;
+}
+
+.try-again-button {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #000000;
+    border: none;
+    padding: 8px 30px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    white-space: nowrap;
+    width: auto;
+}
+
+.try-again-button:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+    transform: translateX(-50%);
+}
+
+.qr-container {
+    position: absolute;
+    top: calc((100vh - 600px) / 2 + 600px + 40px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 85%;
+    background-color: rgba(64, 64, 64, 0.85);
+    padding: 12px 15px;
+    border-radius: 10px;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.page3-image {
+    position: static;
+    max-width: 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: none;
+}
+
+.page3-image.show {
+    opacity: 1;
+}
+
+.qr-description {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: left;
+    max-width: 280px;
+}
+
+.qr-description p {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.95);
+    white-space: normal;
+    word-wrap: break-word;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.page3-image.show + .qr-description {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: calc((100vh - 600px) / 2);
+    }
+    
+    .qr-container {
+        top: calc((100vh - 600px) / 2 + 600px + 30px);
+        padding: 10px 12px;
+    }
+    
+    .qr-description p {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+    
+    .page3-image {
+        max-width: 45px;
+    }
+
+    .main-content {
+        margin-top: 2vh;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 400px;
+        padding: 15px 20px;
+    }
+
+    .instructions li {
+        font-size: 0.8em;
+        margin-bottom: 8px;
+        padding-left: 8em;
+        padding-right: 7em;
+        line-height: 1.3;
+    }
+
+    .instructions li::before {
+        left: 7em;
+    }
+
+    .answer-section {
+        margin-top: min(30px, 3vw);
+    }
+
+    .instructions {
+        margin: 0 -20px 15px -20px;
+        max-width: calc(100% + 40px);
+        width: calc(100% + 40px);
+    }
+
+    .instructions li {
+        font-size: 0.8em;
+        margin-bottom: 8px;
+        padding-left: 8em;
+        padding-right: 7em;
+        line-height: 1.3;
+    }
+
+    .instructions li::before {
+        left: 7em;
+    }
+
+    .page-input {
+        width: 70px;
+        padding: 5px 6px;
+        font-size: 0.8em;
+    }
+
+    .answer-button {
+        padding: 5px 14px;
+        font-size: 0.85em;
+    }
+}
+
+.answer-chinese {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.answer-english {
+    font-size: 16px;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+
+.answer-line {
+    margin-bottom: 10px;
+    line-height: 1.8;
+    text-align: center;
+    letter-spacing: 2px;
+    white-space: pre;
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
