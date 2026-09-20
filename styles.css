@@ -186,7 +186,7 @@ body {
     position: relative;
     overflow: hidden;
     background: #080707 url('cover.png') center / 400px 600px no-repeat;
-    transition: opacity 0.45s ease, transform 0.9s ease, background-image 0s 0.45s;
+    transition: none;
 }
 
 .landing-page::after {
@@ -229,7 +229,7 @@ body {
 }
 
 .landing-page.is-opened {
-    background-image: url('open-page.png');
+    background-image: url('open-page.webp');
     transform: none;
     opacity: 1;
 }
