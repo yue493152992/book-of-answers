@@ -9,7 +9,7 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     background-color: #000;
-    background-image: url('1.webp');
+    background-image: url('1.png');
     background-repeat: no-repeat;
     background-size: 400px 600px;
     background-position: center;
@@ -211,6 +211,7 @@ body {
 }
 
 .landing-page .start-button {
+    display: none;
     position: absolute;
     left: 50%;
     bottom: 10vh;
@@ -234,7 +235,10 @@ body {
 }
 
 .landing-page.is-opened .start-button {
+    display: block;
     bottom: 22vh;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .landing-page.is-opened .start-button,

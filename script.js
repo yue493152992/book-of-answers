@@ -3,16 +3,13 @@ const landingPage = document.getElementById('landingPage');
 const mainContent = document.getElementById('mainContent');
 const startButton = document.getElementById('startButton');
 
-startButton.addEventListener('click', () => {
+landingPage.addEventListener('click', () => {
     if (!landingPage.classList.contains('is-opened')) {
         landingPage.classList.add('opening');
-        startButton.disabled = true;
 
         window.setTimeout(() => {
             landingPage.classList.remove('opening');
             landingPage.classList.add('is-opened');
-            startButton.disabled = false;
-            startButton.textContent = '开启';
         }, 900);
         return;
     }
