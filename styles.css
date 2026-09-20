@@ -185,7 +185,7 @@ body {
 .landing-page {
     position: relative;
     overflow: hidden;
-    background: #080707 url('cover.png') center / cover no-repeat;
+    background: #080707 url('cover.png') center / 400px 600px no-repeat;
     transition: opacity 0.45s ease, transform 0.9s ease, background-image 0s 0.45s;
 }
 
@@ -643,6 +643,10 @@ body {
 @media (max-width: 600px) {
     body {
         padding-top: calc((100vh - 600px) / 2);
+    }
+
+    .landing-page {
+        background-size: min(100vw, 400px) auto;
     }
     
     .qr-container {
