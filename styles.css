@@ -238,7 +238,7 @@ body {
     display: block;
     bottom: 22vh;
     opacity: 0;
-    pointer-events: none;
+    pointer-events: auto;
 }
 
 .landing-page.is-opened .start-button,

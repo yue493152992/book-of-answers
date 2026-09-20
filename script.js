@@ -5,15 +5,12 @@ const startButton = document.getElementById('startButton');
 
 landingPage.addEventListener('click', () => {
     if (!landingPage.classList.contains('is-opened')) {
-        landingPage.classList.add('opening');
-
-        window.setTimeout(() => {
-            landingPage.classList.remove('opening');
-            landingPage.classList.add('is-opened');
-        }, 900);
-        return;
+        landingPage.classList.add('is-opened');
     }
+});
 
+startButton.addEventListener('click', () => {
+    if (!landingPage.classList.contains('is-opened')) return;
     landingPage.classList.add('hidden');
     mainContent.classList.remove('hidden');
 });
