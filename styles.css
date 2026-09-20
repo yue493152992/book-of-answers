@@ -229,7 +229,7 @@ body {
 }
 
 .landing-page.is-opened {
-    background-image: url('open-page.webp');
+    background-image: url('open-page.png');
     transform: none;
     opacity: 1;
 }
