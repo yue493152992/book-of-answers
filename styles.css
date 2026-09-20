@@ -181,6 +181,67 @@ body {
         0 0 12px rgba(255, 255, 0, 0.6);
 }
 
+/* 首页封面打开过渡 */
+.landing-page {
+    position: relative;
+    overflow: hidden;
+    background: #080707 url('cover.webp') center / cover no-repeat;
+    transition: opacity 0.45s ease, transform 0.9s ease, background-image 0s 0.45s;
+}
+
+.landing-page::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 214, 145, 0.22), transparent 42%, rgba(0, 0, 0, 0.55));
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.9s ease;
+}
+
+.landing-page .content {
+    position: static;
+    z-index: 1;
+}
+
+.landing-page .subtitle,
+.landing-page h1,
+.landing-page .description {
+    display: none;
+}
+
+.landing-page .start-button {
+    position: absolute;
+    left: 50%;
+    bottom: 10vh;
+    transform: translateX(-50%);
+    margin-top: 0;
+}
+
+.landing-page.opening {
+    transform: scale(1.08) rotateX(8deg);
+    opacity: 0;
+}
+
+.landing-page.opening::after {
+    opacity: 1;
+}
+
+.landing-page.is-opened {
+    background-image: url('open-page.webp');
+    transform: none;
+    opacity: 1;
+}
+
+.landing-page.is-opened .start-button {
+    bottom: 22vh;
+}
+
+.landing-page.is-opened .start-button,
+.landing-page.is-opened .start-button:hover {
+    color: #ffd700;
+}
+
 /* 主内容页面样式 */
 .main-content {
     min-height: 100vh;
