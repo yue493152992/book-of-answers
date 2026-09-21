@@ -236,9 +236,13 @@ body {
 
 .landing-page.is-opened .start-button {
     display: block;
-    bottom: 22vh;
-    opacity: 0;
+    top: 61%;
+    bottom: auto;
+    width: 42%;
+    height: 12%;
+    opacity: 0.01;
     pointer-events: auto;
+    transform: translate(-50%, -50%);
 }
 
 .landing-page.is-opened .start-button,
