@@ -1123,7 +1123,7 @@ getAnswerButton.addEventListener('click', () => {
         
         // 重置按钮状态
         getAnswerButton.disabled = false;
-        getAnswerButton.textContent = '获取答案';
+        getAnswerButton.textContent = '查看答案';
     }, 1500);
 });
 
@@ -1155,7 +1155,7 @@ randomButton.addEventListener('click', () => {
 
         // 重置按钮状态
         randomButton.disabled = false;
-        randomButton.textContent = '直接获取答案';
+        randomButton.textContent = '随机翻页';
     }, 1500);
 });
 
