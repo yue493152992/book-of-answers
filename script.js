@@ -1026,7 +1026,6 @@ const getAnswerButton = document.getElementById('getAnswer');
 const randomButton = document.getElementById('getRandomAnswer');
 const tryAgainButton = document.getElementById('tryAgain');
 const page3Image = document.getElementById('page3Image');
-const copyrightNotice = document.getElementById('copyrightNotice');
 
 // 输入框限制
 pageInput.addEventListener('input', (e) => {
@@ -1116,7 +1115,6 @@ getAnswerButton.addEventListener('click', () => {
         document.querySelector('.instructions').style.display = 'none';
         document.querySelector('.input-group').style.display = 'none';
         randomButton.style.display = 'none';
-        copyrightNotice.style.display = 'none';
         
         // 显示再尝试按钮和装饰图片
         tryAgainButton.style.display = 'block';
@@ -1149,7 +1147,6 @@ randomButton.addEventListener('click', () => {
         document.querySelector('.instructions').style.display = 'none';
         document.querySelector('.input-group').style.display = 'none';
         randomButton.style.display = 'none';
-        copyrightNotice.style.display = 'none';
         
         // 显示再尝试按钮和装饰图片
         tryAgainButton.style.display = 'block';
@@ -1178,5 +1175,4 @@ tryAgainButton.addEventListener('click', () => {
     document.querySelector('.instructions').style.display = 'block';
     document.querySelector('.input-group').style.display = 'flex';
     randomButton.style.display = 'block';
-    copyrightNotice.style.display = 'block';
 });
